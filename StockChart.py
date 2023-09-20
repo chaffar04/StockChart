@@ -7,7 +7,7 @@ from datetime import datetime
 from tabulate import tabulate
 import numpy as np
 
-os.system("clear")
+os.system("cls")
 
 #dictionary linking time to time interval
 time_dict = {
@@ -54,11 +54,11 @@ while True:
     break
 
   except KeyError:#if this error happens
-    os.system("clear")
+    os.system("cls")
     print("Invalid Time Range")
 
   except:#if any other error happens
-    os.system("clear")
+    os.system("cls")
     print("Invalid Ticker")
 
 
@@ -91,7 +91,7 @@ if json_yield != {}:
 else:
   json_yield = "0%"
 
-os.system("clear")
+os.system("cls")
 
 table = [['Mkt cap',json_marketCap],['P/E ratio',json_pe],['Div yield',json_yield],['Volume',json_volumeToday],['52-wk high',json_fiftyTwoWeekHigh],['52-wk low',json_fiftyTwoWeekLow]]#data to be displayed
 print(tabulate(table,tablefmt="fancy_grid"))#tabulate and display data
